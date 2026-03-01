@@ -39,6 +39,27 @@ export class Smb2Api implements ICredentialType {
 			default: '',
 		},
 		{
+			displayName: 'NTLM Version',
+			name: 'ntlmVersion',
+			type: 'options',
+			description: 'Force a specific NTLM version for authentication. Use NTLMv2 for modern Windows servers.',
+			default: 'auto',
+			options: [
+				{
+					name: 'Auto-detect (Recommended)',
+					value: 'auto',
+				},
+				{
+					name: 'NTLMv1',
+					value: 'v1',
+				},
+				{
+					name: 'NTLMv2',
+					value: 'v2',
+				},
+			],
+		},
+		{
 			displayName: 'Port',
 			name: 'port',
 			type: 'number',
